@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="importmap-type" content="systemjs-importmap" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "app4": "http://localhost:4201/main.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+    <!-- 用于支持 Angular 应用 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script> -->
+    <!-- 用于覆盖通过 import-map 设置的 JavaScript 模块下载地址 -->
+    <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+    <import-map-overrides-full></import-map-overrides-full>
+  </body>
+</html>
